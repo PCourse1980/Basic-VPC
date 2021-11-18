@@ -10,7 +10,7 @@ resource "aws_security_group" "SG_HTTP" {
       from_port        = 80
       to_port          = 80
       protocol         = "tcp"
-      cidr_blocks      = [aws_vpc.developer_vpc.cidr_block]
+      cidr_blocks      = ["0.0.0.0/0"]
       
     }
 
@@ -19,7 +19,7 @@ resource "aws_security_group" "SG_HTTP" {
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
-      cidr_blocks      = [aws_vpc.developer_vpc.cidr_block]
+      cidr_blocks      = ["0.0.0.0/0"]
       
     }
 
